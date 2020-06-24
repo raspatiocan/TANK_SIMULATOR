@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Simulator Tank.sln.unity
+  isLoaded: 1
+  isActive: 1
