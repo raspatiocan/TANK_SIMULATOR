@@ -6,8 +6,8 @@ using UnityEngine;
 public class TankBeahviourScript : MonoBehaviour 
 {
 	private Transform myTransform;
-	public GameObject selongsong;
-	public GameObject titikTembakan;
+	private GameObject selongsong;
+	private GameObject titikTembakan;
 	private AudioSource audioSource;
 	private string stateRotasiVertikal; //aman, bawah, atas
 	// aman ---> bisa dilakukan interaksi vertikal atas bawah
@@ -16,8 +16,10 @@ public class TankBeahviourScript : MonoBehaviour
 
 	public float kecepatanRotasi = 20;
 	public float kecepatanAwalPeluru = 20;
+	public float gravity = 10;
 
 	[HideInInspector] public float sudutMeriam;
+	[HideInInspector] public float sudutTembak; //
 	[HideInInspector] public float nilaiRotasiY;
 
 	public GameObject objekTembakan;

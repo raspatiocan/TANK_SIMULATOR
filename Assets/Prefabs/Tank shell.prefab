@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 114688089601025374}
   - component: {fileID: 136898596740026892}
   - component: {fileID: 54538009013335690}
-  - component: {fileID: 82966499355085028}
+  - component: {fileID: 844051209653998333}
   m_Layer: 0
   m_Name: Tank shell
   m_TagString: Untagged
@@ -27,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097784147143772}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.48, y: 5.06, z: 25.54}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.16, y: -19.06001, z: 3.35}
   m_LocalScale: {x: 0.25867343, y: 0.20675388, z: 0.2948303}
   m_Children:
   - {fileID: 4732533921514240}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114688089601025374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,10 +59,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.308235
-  m_Height: 12.8671
+  m_Radius: 1.3715189
+  m_Height: 13.145029
   m_Direction: 2
-  m_Center: {x: 0, y: 0.02696512, z: 5.680431}
+  m_Center: {x: 0, y: 0.1061404, z: 5.541468}
 --- !u!54 &54538009013335690
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79,7 +79,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!82 &82966499355085028
+--- !u!82 &844051209653998333
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

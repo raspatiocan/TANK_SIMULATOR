@@ -5,7 +5,7 @@ using UnityEngine;
 public class GerakPeluruScript : MonoBehaviour 
 {
 	private Transform myTransform;
-	private float waktuTerbangPeluru;
+	public float waktuTerbangPeluru;
 
 	private TankBeahviourScript tankBehaviour;
 	private float _kecAwal;
@@ -16,6 +16,8 @@ public class GerakPeluruScript : MonoBehaviour
 
 	public GameObject ledakan;
 	public AudioClip audioLedakan;
+
+	private GameManagerScript gameManager;
 
 
 	// Use this for initialization
@@ -35,6 +37,12 @@ public class GerakPeluruScript : MonoBehaviour
 
 		// init audiosource
 		audioSource = GetComponent<AudioSource>();
+
+		// //init gravity
+		// _gravitasi = GameObject.FindObjectOfType<TankBeahviourScript>().gravity;
+
+		//init gamemanager
+		gameManager = GameObject.FindObjectOfType<GameManagerScript>();
 		
 	}
 	
@@ -43,6 +51,8 @@ public class GerakPeluruScript : MonoBehaviour
 	{
 		//timer
 		waktuTerbangPeluru += Time.deltaTime;
+
+		gameManager._lamaWaktuTerbangPeluru = this.waktuTerbangPeluru;
 		
 		myTransform.position = PosisiTerbangPeluru(_posisiAwal, _kecAwal, waktuTerbangPeluru, _sudutTembak, _sudutMeriam);
 		
@@ -61,6 +71,7 @@ public class GerakPeluruScript : MonoBehaviour
     {
 		if ( other.tag == "Land")
         {
+			// Debug.Log("kena tanah");
 			//hancurkan peluru
 			Destroy(this.gameObject, 2f);
 
@@ -73,3 +84,5 @@ public class GerakPeluruScript : MonoBehaviour
         }
     }
 }
+
+//Part 8 menit 36
